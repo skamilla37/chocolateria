@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="{% static 'ventas/css/dashboard.css' %}">
     <title>Inventario</title>
 </head>
 <body>
@@ -17,13 +18,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard.html">
+                    <a href="{% url 'dashboard' %}">
                         <span class="icono"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="titulo">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="clientes.html">
+                    <a href="{% url 'clientes' %}">
                         <span class="icono"><ion-icon name="person-outline"></ion-icon></span>
                         <span class="titulo">Clientes</span>
                     </a>
@@ -47,7 +48,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="{% url 'index' %}">
                         <span class="icono"><ion-icon name="log-out-outline"></ion-icon></span>
                         <span class="titulo">Cerrar Sesión</span>
                     </a>
@@ -66,7 +67,7 @@
                     </label>
                 </div>
                 <div class="perfil-usuario">
-                    <img src="imgdashboard/profile-photo1.jpg" alt="">
+                    <img src="{% static 'ventas/img/profile-photo1.jpg' %}" alt="">
                 </div>
             </div>
             <div class="cards">
@@ -179,6 +180,6 @@
     </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="dashboard.js"></script>
+    <script src="{% static 'ventas/js/dashboard.js' %}"></script>
 </body>
 </html>
